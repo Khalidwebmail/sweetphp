@@ -6,4 +6,9 @@ class Page{
     {
         echo "page loaded";
     }
+
+    public function about($id)
+    {
+        print "This given id is". $id;
+    }
 }

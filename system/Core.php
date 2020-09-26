@@ -15,7 +15,6 @@ class Core
     {
         $this->getUrl();
         $this->getController();
-
     }
 
     private function getUrl()
@@ -38,7 +37,24 @@ class Core
         }
 
         require_once "../app/controllers/".$this->controller.".php";
-        return $this->controller = new $this->controller();
+        $this->controller = new $this->controller();
+
+        $this->getMethod();
+
+        $this->params = $this->url ? array_values($this->url) : [];
+        call_user_func_array([$this->controller, $this->method], $this->params);
+    }
+
+    private function getMethod()
+    {
+        if(isset($this->url[1]))
+        {
+            if(method_exists($this->controller, $this->url[1]))
+            {
+                $this->method = $this->url[1];
+                unset($this->url[1]);
+            }
+        }
     }
 }
 

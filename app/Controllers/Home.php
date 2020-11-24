@@ -1,9 +1,9 @@
 <?php
 
-class Home
+class Home extends Controller
 {
-    public function index($id)
+    public function index()
     {
-        echo "This is home index" . $id;
+        
     }
 }

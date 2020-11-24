@@ -3,6 +3,6 @@
   // Load Core file
   require_once "Config/config.php";
 
-  spl_autoload_register(function ($className) {
-      require_once 'Libraries/'. $className . '.php';
+  spl_autoload_register(function ($class) {
+    require_once 'Libraries/'. $class . '.php';
   });

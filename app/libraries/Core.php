@@ -10,7 +10,7 @@
  * but it is optional
  */
 class Core {
-    private $controller = "Home";
+    private $controller = "HomeController";
     private $method = "index";
     private $params = [];
     private $url;

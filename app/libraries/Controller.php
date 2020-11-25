@@ -2,7 +2,7 @@
 
 require_once "include.php";
 
-class Controller
+abstract class Controller
 {
     use Sanitize, LoadModel, LoadView;
 }

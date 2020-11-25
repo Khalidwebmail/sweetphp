@@ -44,7 +44,7 @@ class Core {
      */
     private function checkController()
     {
-        if(file_exists("../app/Controllers/".ucwords($this->url[0]).".php"))
+        if(isset($this->url[0]) && file_exists("../app/Controllers/".ucwords($this->url[0]).".php"))
         {
             $this->controller = ucwords($this->url[0]);
             unset($this->url[0]);

@@ -1,4 +1,4 @@
 <?php
-require_once "../Traits/Sanitize.php";
-require_once "../Traits/LoadModel.php";
-require_once "../Traits/LoadView.php";
+require_once "../app/Traits/Sanitize.php";
+require_once "../app/Traits/LoadModel.php";
+require_once "../app/Traits/LoadView.php";
